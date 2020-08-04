@@ -75,5 +75,7 @@ async def on_guild_join(guild):
     print(text_channel)
     await text_channel[0].send("Avada Kedavra, MEOW")
 
-print("THE TOKEN IS", TOKEN)
-client.run(TOKEN)
+if TOKEN is None:
+    print("Please specify a token in your env")
+else:
+    client.run(TOKEN)
